@@ -127,4 +127,4 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Call proprietary blob setup
-$(call inherit-product, vendor/samsung/universal9810-common/sdm845-common-vendor.mk)
+$(call inherit-product, vendor/samsung/sdm845-common/sdm845-common-vendor.mk)
