@@ -30,11 +30,11 @@ static inline const char* BtmGetDefaultName()
     char product_device[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", product_device, "");
 
-    if (strstr(product_device, "starlte"))
+    if (strstr(product_device, "starltechn"))
         return "Galaxy S9";
-    if (strstr(product_device, "star2lte"))
+    if (strstr(product_device, "star2ltechn"))
         return "Galaxy S9+";
-    if (strstr(product_device, "crownlte"))
+    if (strstr(product_device, "crownltechn"))
         return "Galaxy Note 9";
 
     // Fallback to Default
@@ -47,6 +47,8 @@ static inline const char* BtmGetDefaultName()
 #define BTIF_HF_WBS_PREFERRED FALSE /* Don't prefer WBS    */
 
 #define BLE_VND_INCLUDED TRUE
+
+#define DISABLE_WBS TRUE
 
 #define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
 
