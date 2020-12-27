@@ -13,7 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # VNDK
@@ -46,13 +50,13 @@ PRODUCT_COPY_FILES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    fstab.samsungexynos9810 \
+    fstab.qcom \
     init.samsung.rc \
     init.usb_accessory.rc
 
 # Recovery
 PRODUCT_PACKAGES += \
-    init.recovery.samsungexynos9810.rc
+    init.recovery.sdm845.rc
 
 # Charger
 PRODUCT_COPY_FILES += \
@@ -93,7 +97,7 @@ PRODUCT_COPY_FILES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.9810
+    lineage.livedisplay@2.0-service.sdm845
 
 # Touch
 PRODUCT_PACKAGES += \
@@ -103,18 +107,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
-# Lights
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hidl/lights/vendor.samsung.hardware.light@3.0-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/bin/hw/vendor.samsung.hardware.light@3.0-service \
-    $(LOCAL_PATH)/hidl/lights/vendor.samsung.hardware.light@3.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.light@3.0-service.rc
-
 # Power
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hidl/power/android.hardware.power@1.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/android.hardware.power@1.0-service.rc \
-    $(LOCAL_PATH)/hidl/power/android.hardware.power@1.3-service.samsung.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/vintf/manifest/android.hardware.power@1.3-service.samsung.xml \
-    $(LOCAL_PATH)/hidl/power/android.hardware.power@1.3-service.samsung-libperfmgr:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/bin/hw/android.hardware.power@1.3-service.samsung-libperfmgr \
-    $(LOCAL_PATH)/hidl/power/libperfmgr.so:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/lib64/libperfmgr.so \
-    $(LOCAL_PATH)/hidl/power/powerhint.json:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/powerhint.json
+PRODUCT_PACKAGES += \
+    power.qcom
 
 # S-Pen
 PRODUCT_COPY_FILES += \
@@ -132,4 +127,4 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Call proprietary blob setup
-$(call inherit-product, vendor/samsung/universal9810-common/universal9810-common-vendor.mk)
+$(call inherit-product, vendor/samsung/universal9810-common/sdm845-common-vendor.mk)
