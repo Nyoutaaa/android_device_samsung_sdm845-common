@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.zram \
     init.samsung.rc \
     init.usb_accessory.rc
 
