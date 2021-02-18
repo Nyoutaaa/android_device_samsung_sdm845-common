@@ -1,6 +1,8 @@
 /*
  * Copyright (C) 2012 The Android Open Source Project
  * Copyright (C) 2014 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (C) 2018-2021 The LineageOS Project
+ * Copyright (C) 2021 AOSPK
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,14 +29,14 @@ static inline const char* BtmGetDefaultName()
 {
     char product_device[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", product_device, "");
-    
+
     if (strstr(product_device, "starlte"))
         return "Galaxy S9";
     if (strstr(product_device, "star2lte"))
         return "Galaxy S9+";
     if (strstr(product_device, "crownlte"))
         return "Galaxy Note 9";
-    
+
     // Fallback to Default
     return "Samsung Galaxy";
 }
