@@ -1,0 +1,17 @@
+[
+   {
+      "repository":"kernel_samsung_sdm845",
+      "target_path":"kernel/samsung/sdm845"
+   },
+   {
+      "remote": "lab-devices",
+      "repository":"vendor_samsung_sdm845-common",
+      "target_path":"vendor/samsung/sdm845-common"
+   },
+   {
+      "remote":"github",
+      "repository":"LineageOS/android_hardware_samsung",
+      "target_path":"hardware/samsung",
+      "branch":"lineage-18.1"
+   }
+]
