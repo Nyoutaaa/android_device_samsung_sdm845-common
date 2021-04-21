@@ -21,7 +21,6 @@ COMMON_PATH := device/samsung/sdm845-common
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Audio
-TARGET_EXCLUDES_AUDIOFX := true
 USE_XML_AUDIO_POLICY_CONF := 1
 
 
