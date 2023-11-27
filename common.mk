@@ -90,19 +90,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
-# Lights
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hidl/lights/vendor.samsung.hardware.light@3.0-service:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/bin/hw/vendor.samsung.hardware.light@3.0-service \
-    $(LOCAL_PATH)/hidl/lights/vendor.samsung.hardware.light@3.0-service.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/29/etc/init/vendor.samsung.hardware.light@3.0-service.rc
-
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze
-
-
-# Touch
-PRODUCT_PACKAGES += \
-    lineage.touch@1.0-service.sdm845
 
 # Power
 PRODUCT_PACKAGES += \
