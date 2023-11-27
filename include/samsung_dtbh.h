@@ -1,7 +1,6 @@
 /* tools/mkbootimg/samsung_dtbh.h
 **
-** Copyright 2017-2021 The LineageOS Project
-** Copyright (C) 2021 AOSPK
+** Copyright 2017-2023 The LineageOS Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.

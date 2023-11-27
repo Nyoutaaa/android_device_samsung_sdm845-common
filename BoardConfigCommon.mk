@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
-# Copyright (C) 2021 AOSPK
+# Copyright (C) 2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,7 +22,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 USE_XML_AUDIO_POLICY_CONF := 1
-
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth

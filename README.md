@@ -5,4 +5,4 @@
 * Galaxy S9+ (star2qltechn)
 * Galaxy Note 9 (crownqltechn)
 
-Copyright (C) 2021 AOSPK.
+Copyright (C) 2023 LineageOS.
